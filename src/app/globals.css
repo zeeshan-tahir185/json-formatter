@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ *
+ * Design tokens. Light is the default; `.dark` overrides.            *
+ * Values are space-separated RGB channels so Tailwind's <alpha-value> *
+ * (e.g. bg-accent/40) works against every token.                     *
+ * ------------------------------------------------------------------ */
+:root {
+  color-scheme: light;
+
+  --bg: 248 248 246;        /* warm near-white page */
+  --surface: 255 255 255;   /* cards / editors */
+  --surface-2: 244 244 241; /* insets, gutters */
+  --surface-3: 235 235 231; /* hover */
+
+  --line: 228 228 223;
+  --line-strong: 212 212 205;
+
+  --text: 26 27 31;
+  --text-muted: 88 90 99;
+  --text-subtle: 138 140 150;
+
+  --accent: 13 148 136;        /* teal-600 */
+  --accent-hover: 15 118 110;  /* teal-700 */
+  --accent-fg: 255 255 255;
+  --accent-soft: 204 251 241;  /* teal-100 */
+}
+
+.dark {
+  color-scheme: dark;
+
+  --bg: 11 12 14;           /* near-black */
+  --surface: 21 22 26;
+  --surface-2: 28 29 34;
+  --surface-3: 37 39 45;
+
+  --line: 39 41 48;
+  --line-strong: 56 58 67;
+
+  --text: 233 234 238;
+  --text-muted: 159 162 173;
+  --text-subtle: 110 113 124;
+
+  --accent: 45 212 191;        /* teal-400 (vivid on dark) */
+  --accent-hover: 20 184 166;  /* teal-500 */
+  --accent-fg: 5 18 16;        /* near-black ink on the bright accent */
+  --accent-soft: 17 49 46;     /* deep teal wash */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  /* A faint accent glow anchored to the top — adds depth without noise. */
+  background-image: radial-gradient(
+    52rem 26rem at 50% -14rem,
+    rgb(var(--accent) / 0.07),
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: rgb(var(--accent) / 0.25);
+}
+
+/* Thin, theme-aware scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--line-strong) / 0.9) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--line-strong) / 0.8);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--text-subtle) / 0.8);
+}
+
+/* Editor + viewers share a monospace, no-wrap layout */
+.code-surface {
+  font-family: theme('fontFamily.mono');
+  font-size: 13px;
+  line-height: 20px;
+  tab-size: 2;
+  font-feature-settings: 'liga' 0, 'calt' 0; /* keep JSON glyphs literal */
+}
+
+textarea.code-surface {
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+/* Hide the resize handle but keep textarea resizing off for layout control */
+textarea {
+  resize: none;
+}

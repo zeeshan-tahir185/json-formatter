@@ -1,0 +1,25 @@
+{
+  "cartId": "CART-9001",
+  "currency": "USD",
+  "items": [
+    {
+      "sku": "A-100",
+      "name": "Mechanical Keyboard",
+      "qty": 2,
+      "price": 89.99
+    },
+    {
+      "sku": "B-220",
+      "name": "USB-C Cable",
+      "qty": 2,
+      "price": 8.75
+    },
+    {
+      "sku": "D-440",
+      "name": "Wireless Mouse",
+      "qty": 1,
+      "price": 24.99
+    }
+  ],
+  "total": 213.72
+}

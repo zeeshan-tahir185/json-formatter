@@ -1,0 +1,25 @@
+{
+  "cartId": "CART-9001",
+  "currency": "USD",
+  "items": [
+    {
+      "sku": "A-100",
+      "name": "Mechanical Keyboard",
+      "qty": 1,
+      "price": 89.99
+    },
+    {
+      "sku": "B-220",
+      "name": "USB-C Cable",
+      "qty": 2,
+      "price": 9.5
+    },
+    {
+      "sku": "C-330",
+      "name": "Laptop Stand",
+      "qty": 1,
+      "price": 39
+    }
+  ],
+  "total": 147.99
+}

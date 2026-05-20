@@ -1,0 +1,21 @@
+{
+  "name": "json-formatter-validator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A fast, modern, front-end-only JSON formatter, validator and side-by-side diff tool built with Next.js.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
+  }
+}

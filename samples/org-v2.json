@@ -1,0 +1,26 @@
+{
+  "company": {
+    "name": "Northwind R&D",
+    "department": {
+      "name": "Engineering",
+      "team": {
+        "name": "Platform",
+        "lead": {
+          "name": "Grace Hopper",
+          "contact": {
+            "email": "grace.hopper@northwind.dev",
+            "phone": "+1-202-555-0199"
+          },
+          "skills": [
+            "Go",
+            "Kubernetes",
+            "Rust"
+          ]
+        },
+        "headcount": 11
+      }
+    },
+    "founded": 2019,
+    "remoteFriendly": true
+  }
+}

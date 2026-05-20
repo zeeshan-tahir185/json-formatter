@@ -1,0 +1,16 @@
+{
+  "id": 1042,
+  "name": "Ada Lovelace",
+  "email": "ada.lovelace@example.com",
+  "active": false,
+  "roles": [
+    "admin",
+    "viewer"
+  ],
+  "profile": {
+    "age": 29,
+    "country": "UK",
+    "timezone": "Europe/London"
+  },
+  "lastLogin": "2026-05-18T17:05:00Z"
+}
